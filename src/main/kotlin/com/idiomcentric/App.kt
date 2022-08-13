@@ -5,11 +5,11 @@ import io.github.bucket4j.Bucket
 import java.time.Duration
 import java.time.Instant
 import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
+import java.util.concurrent.ScheduledExecutorService
 
 class BucketExamples {
     companion object {
-        val scheduleExecutor = Executors.newScheduledThreadPool(1)
+        val scheduleExecutor: ScheduledExecutorService = Executors.newScheduledThreadPool(1)
         fun bandwidth() {
             val limit = Bandwidth.simple(1, Duration.ofSeconds(10L))
             val bucket = Bucket.builder().addLimit(limit).build()
@@ -32,7 +32,7 @@ class BucketExamples {
                 token.get()
                 println(Instant.now())
             }
-            scheduleExecutor.awaitTermination(1L, TimeUnit.SECONDS)
+            scheduleExecutor.shutdown()
         }
     }
 }
