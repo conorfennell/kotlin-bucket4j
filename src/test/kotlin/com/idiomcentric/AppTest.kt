@@ -10,9 +10,8 @@ class AppTest {
     @Test
     fun appHasAGreeting() {
         val pattern = java.util.regex.Pattern.compile("some (?<houseNumber>[0-9]+) some")
-        val matcher =  pattern.matcher("some 4353543 some")
+        val matcher = pattern.matcher("some 4353543 some")
         matcher.find()
-        val houseNumber = matcher.group("houseNumber")
         val classUnderTest = App()
         assertNotNull(classUnderTest.greeting, "app should have a greeting")
     }
