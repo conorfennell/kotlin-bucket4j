@@ -6,8 +6,9 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "10.3.0" }
 
 [libraries]
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.6.1" }
+bucket4j-core = { module = "com.bucket4j:bucket4j-core", version = "8.0.1" }
 guava = { module = "com.google.guava:guava", version = "30.1.1-jre" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.6.1" }
 
 [bundles]
 

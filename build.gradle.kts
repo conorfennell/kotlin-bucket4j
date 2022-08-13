@@ -24,8 +24,8 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.bucket4j.core)
 }
 
 testing {
