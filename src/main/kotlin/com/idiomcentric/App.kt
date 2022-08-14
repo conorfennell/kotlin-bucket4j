@@ -9,7 +9,7 @@ import java.util.concurrent.ScheduledExecutorService
 
 class BucketExamples {
     companion object {
-        val scheduleExecutor: ScheduledExecutorService = Executors.newScheduledThreadPool(1)
+        private val scheduleExecutor: ScheduledExecutorService = Executors.newScheduledThreadPool(1)
         fun bandwidth() {
             val limit = Bandwidth.simple(1, Duration.ofSeconds(10L))
             val bucket = Bucket.builder().addLimit(limit).build()

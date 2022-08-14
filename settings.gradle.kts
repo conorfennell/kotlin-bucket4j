@@ -8,5 +8,5 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-rootProject.name = "kotlin-coroutines"
+rootProject.name = "kotlin-bucket4j"
 include("app")
