@@ -8,24 +8,6 @@ import java.time.Instant
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
 
-internal enum class PricingPlan {
-    LOW {
-        val limit: Bandwidth
-            get() = Bandwidth.classic(20, Refill.intervally(20, Duration.ofHours(1)))
-    },
-    MEDIUM {
-        val limit: Bandwidth
-            get() = Bandwidth.classic(40, Refill.intervally(40, Duration.ofHours(1)))
-    },
-    HIGH {
-        val limit: Bandwidth
-            get() = Bandwidth.classic(100, Refill.intervally(100, Duration.ofHours(1)))
-    },
-    SPIKE {
-        val limit: Bandwidth
-            get() = Bandwidth.classic(1000, Refill.intervally(100, Duration.ofHours(1)))
-    }
-}
 class BucketExamples {
     companion object {
         private val scheduleExecutor: ScheduledExecutorService = Executors.newScheduledThreadPool(1)

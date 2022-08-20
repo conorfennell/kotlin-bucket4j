@@ -19,12 +19,15 @@ kotlin {
 dependencies {
     // Align versions of all Kotlin components
     implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.jdk8)
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     implementation(libs.bucket4j.core)
+    implementation(libs.bucket4j.redis)
+    implementation(libs.redisson)
     implementation(libs.guava)
 }
 

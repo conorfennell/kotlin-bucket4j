@@ -1,5 +1,7 @@
 [versions]
 kotlin =  "1.6.21"
+bucket4j = "8.0.1"
+kotlinx-coroutines = "1.6.4"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -7,8 +9,11 @@ ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "10.3.0" }
 
 [libraries]
 bucket4j-core = { module = "com.bucket4j:bucket4j-core", version = "8.0.1" }
+bucket4j-redis = { module = "com.bucket4j:bucket4j-redis", version.ref = "bucket4j" }
+redisson = { module = "org.redisson:redisson", version = "3.17.5" }
 guava = { module = "com.google.guava:guava", version = "30.1.1-jre" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.6.1" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.6.4" }
+kotlinx-coroutines-jdk8 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8", version.ref = "kotlinx-coroutines" }
 
 [bundles]
 
